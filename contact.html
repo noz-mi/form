@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Progate</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+<body>
+    <h1>Contact</h1>
+
+    <p>お仕事のご依頼は以下よりお問い合わせくださいませ。<br>
+    For work requests, please contact us below.</p>
+    <form action="misuzunozue@gmail.com">
+      <h3 class="req">会社名</h3>
+      <input type="corporate" placeholder="inc." name="inc." required>
+      <h3 class="req">名前</h3>
+      <ul class="name">
+      <li><input type="text" placeholder="セイ" name="name" required></li>
+      <li class="list2"><input type="text" placeholder="メイ" name="name" required></li>
+    </ul>
+    <h3 class="req">メールアドレス</h3>
+    <input type="email" placeholder="mail@example.com" name="email" required>
+    <h3 class="req">電話番号</h3>
+    <input type="phone" placeholder="08012345678" name="phone" required>
+    <h3 class="req">お問い合わせ詳細</h3>
+    <textarea placeholder="お問い合わせ内容を入力ください" name="message" required></textarea>
+    <h3>資料などがある場合はご添付ください</h3>
+    <input type="file" name="file">
+    <input class="confirm-text" type="submit" value="送信">
+    
+    </form>
+</body>
+</html>

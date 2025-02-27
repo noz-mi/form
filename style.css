@@ -1,0 +1,190 @@
+// Colours
+$green: #84AD47;
+$red: #AD4747;
+$blue: #4784AD;
+
+form {
+  width: 90%;
+  max-width: 600px;
+  margin: 5% auto;
+  min-width: 320px;
+}
+
+h3{
+  font-size:12px;
+  text-align: left;
+  margin: 30px 0 5px 0;
+}
+
+h3.req::after {
+  content: "必須";
+  color: #ffffff;
+  background: indianred;
+  font-size: 0.8em;
+  padding: 0.3em;
+  border-radius: 0.5em;
+  margin-left:0.3em;
+  }
+
+
+.name {
+  width: auto;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  gap: 40px;
+}
+
+.name li {
+  list-style: none;
+  flex: 1; // 均等に幅を取る
+  margin:0;
+}
+
+
+input, textarea {
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  margin: 0.5rem 0;
+  padding: 1rem 1rem;
+  border-radius: 0.3rem;
+  background: darken(#f9f9f9, 10%);
+  color: darken(#f9f9f9, 50%);}
+
+  .confirm-text{
+    background-color: rgb(233, 156, 156);
+    font:white;
+    width:auto;
+    text-align: center;
+    padding:20px 80px;
+    margin:50px 0 0 0;
+    border-radius: 50px;
+  }
+
+/* カーソルを合わせたときに表示を変える */
+  input.confirm-text:hover{
+  background-color: indianred;
+  }
+  
+
+
+  &[type=submit] {
+    background: $green;
+    color: #fff;
+    width: auto;
+    float: right;
+  }
+
+  &::placeholder {
+    color: darken(#f9f9f9, 50%);
+  }
+
+  &.error {
+    background: $red;
+    color: #fff;
+    &::placeholder {
+      color: darken($red, 60%);
+    }
+  }
+
+textarea {
+  height: 150px;
+}
+.captcha {
+  float:left;
+  input {
+    float: right;
+  }
+}
+  input[name=question] {
+    width: 4rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    text-align: right;
+    padding-right: 0;
+  }
+  [name=captcha] {
+    width: 5rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-left: 0.5rem;
+    &::placeholder {
+      text-align: center;
+    }
+}
+
+
+
+// Generic Styles ;)
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
+body {
+  padding: 5rem 5rem 5rem 48rem;
+  background: #f9f9f9;
+  color: #2f2f2f;
+  font-family: 'Open Sans';
+  text-align:center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("img/backimg.jpg");
+
+}
+
+
+@media screen and (max-width: 960px) {
+
+  h3{
+    color: #fff;
+  }
+
+  input, textarea {
+    border: none;
+    margin: 0.5rem 0;
+    padding: 1rem 1rem;
+    border-radius: 0.3rem;
+    background: darken(#f9f9f9, 10%);
+    color: darken(#f9f9f9, 50%);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  input[type="file"] {
+    color:indianred; /* 「選択されていません」の色を変更 */
+    border: none;
+    margin: 0.5rem 0;
+    padding: 1rem 1rem;
+    border-radius: 0.3rem;
+    background-color: #f9f9f9, 10%;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+  }
+  input[type="send"] {
+  color:white;
+
+  }
+
+  body {
+    padding: 2rem;
+    background: #f9f9f9;
+    color: #2f2f2f;
+    font-family: 'Open Sans';
+    text-align:center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("img/backimg_sp.jpg");
+    background-size:cover;
+  }
+}
